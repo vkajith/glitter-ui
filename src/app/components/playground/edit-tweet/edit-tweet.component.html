@@ -1,0 +1,24 @@
+<div class="modal-header bg-primary text-white">
+    <h4 class="modal-title" id="modal-basic-title">Update Tweet</h4>
+</div>
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+      
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="tweetBody" class="sr-only">Tweet here!</label>
+            <div class="col-sm-10">
+                <textarea  formControlName="tweetBody" class="form-control" rows="3"  maxlength="240" title="Max 240 characters."></textarea>
+                <div *ngIf="editFormData.tweetBody.invalid && (editFormData.tweetBody.dirty || editFormData.tweetBody.touched)"
+                class="alert-danger">
+                <span>Need some content!</span>
+            </div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <button [disabled]="isLoading" class="btn btn-primary mr-2" (click)="modal.close('Cancel')">Cancel</button>
+            <button [disabled]="isLoading" class="btn btn-primary mr-2">Update</button>
+        </div>
+ 
+    </form>
+</div>

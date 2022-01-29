@@ -1,0 +1,14 @@
+
+<div class="col" *ngFor="let item of listPostSearch">
+        <div class="card" style="margin-top: 3em">
+            <div class="card-body">
+                <img src="assets/users.png" style="border-radius: 50%" width="50px" height="50px">
+                {{item.Message}}
+            </div>
+            <div class="card-footer text-muted">
+             
+</div>
+</div>
+</div>
+
+<h6 *ngIf="isEmptyData()">No matching tweets</h6>

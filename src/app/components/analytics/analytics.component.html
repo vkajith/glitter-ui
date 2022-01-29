@@ -1,0 +1,38 @@
+
+<app-navbar></app-navbar>
+<div>
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Most trending Hashtag</h5>
+            <small></small>
+          </div>
+          <p class="mb-1">#{{trendyTag}}</p>
+          <small></small>
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Total Number of Tweets today</h5>
+            <small class="text-muted"></small>
+          </div>
+          <p class="mb-1">{{totalTweets}}</p>
+          <small class="text-muted"></small>
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Most Tweets by</h5>
+            <small class="text-muted"></small>
+          </div>
+          <p class="mb-1">{{mostTweetPerson.Name}}</p>
+          <small class="text-muted"></small>
+        </a>
+        <a class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Most Liked Tweet</h5>
+            <small class="text-muted"></small>
+          </div>
+          <p class="mb-1">"{{mostLikedTweet.Message}}"</p>
+          <small class="text-muted"></small>
+        </a>
+      </div>
+</div>

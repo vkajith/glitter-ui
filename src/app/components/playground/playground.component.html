@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<!-- New Tweet Button-->
+
+<div class="main">
+
+  <button type="button" class="btn btn-info btn-lg" (click)="addTweet()">New Tweet</button>
+
+<!-- Cards -->
+<div class="row list">
+<div class="col tweet" *ngFor="let item of listTweets">
+    <div class="card" style="margin-top: 3em">
+        <div class="card-body">
+            <img src="assets/users.png" style="border-radius: 50%" width="50px" height="50px">
+            {{item.Message}}
+        </div>
+        <div class="card-footer text-muted btnspc">
+          <button class="btn btn-block btn-primary" (click)="likeTweet(item.TweetId)">{{ Isliked(item.TweetId)? 'Liked':'Like' }}</button>
+          <button class="btn btn-block btn-primary" (click)="dislikeTweet(item.TweetId)">{{ Isdisliked(item.TweetId)? 'Disliked':'DisLike' }}</button>
+         
+          <button class="btn btn-block btn-primary" href="#" *ngIf="item.UserId == checkId" (click)="editItem(item.TweetId,item.Message)" >EDIT</button>
+          <button class="btn btn-block btn-primary" *ngIf="item.UserId == checkId" (click)="deleteTweet(item.TweetId)">DELETE</button>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+ 

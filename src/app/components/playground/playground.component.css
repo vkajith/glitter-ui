@@ -1,0 +1,26 @@
+.modal{background: rgba(0,0,0, .5)}
+
+.list{
+    max-width: 800px;
+    background-color: lightblue;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tweet{
+    max-width: 500px;
+}
+
+.btnspc{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+.main{
+    margin: 6px 6px;
+}

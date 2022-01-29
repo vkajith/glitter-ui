@@ -1,0 +1,13 @@
+<div class="row my-3">
+  <div class="col-sm-6" *ngFor="let item of listPeopleSearch">
+    <div class="card text-center bg-dark text-white" style="width: 200px; height: 200px;">
+      <img class="card-img" src="assets/users.png">
+      <div class="card-img-overlay">
+        <h6 class="card-text my-5">{{item.Name}}</h6>
+        <button *ngIf="!samePerson(item.EmailId)" class="btn btn-outline-secondary" (click)="follow(item.EmailId)">{{ isFolloweeContains(item.EmailId)? 'UnFollow' : 'Follow' }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h6 *ngIf="isEmptyData()">No matching people</h6>
